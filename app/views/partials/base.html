@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>{% block title %}{% endblock %}</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<link rel="shortcut icon" href="img/logo.ico"/>
+
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic' rel='stylesheet' type='text/css'>
+
+	<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic|Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700italic,700,900,900italic|Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+
+	{% block styles %}{% endblock %}
+
+</head>
+<body>
+
+	{% include 'header.html' %}
+
+	{% block elements %} {% endblock %}
+
+	{% if path != 'index' %}
+
+		{% include 'footer.html' %}
+
+	{% endif %}
+
+	<script type="text/javascript" src="/js/menu.js"></script>
+
+	{% block scripts %} {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+{% extends './partials/base.html' %}
+
+{% block title %} Grúas e Izajes | Contacto {% endblock %}
+
+{% block styles %}
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+
+{% endblock %}
+
+{% block elements %}
+
+	<!-- <img class="cover" src="img/cover.jpg"></img> -->
+
+	<div class="cover">
+		<div class="cover"></div>
+	</div>
+
+	<section class="contact">
+		<div class="contact__information">
+			<p class="title">Informacion de Contacto</p>
+			<!-- <div class="map">mapita!</div> -->
+			<!-- <p class="info">Dirección: Av. Andrés Aramburú 651 San Isidro, Lima - Perú</p> -->
+			<p class="info">Dirección: Calle Monte Rosa 233 oficina 303 Chacarilla Surco, LIma - Perú</p>
+			<p class="info">Teléfono Fijo: (511)704 9760</p>
+			<p class="info">Teléfono Celular: (+51) 994 740 422</p>
+			<p class="info">Web: <a href="">www.gruaseizajes.pe</a></p>
+			<p class="info">Email: <a href="">servicios@gruaseizajes.pe</a></p>
+		</div>
+
+		<form class="contact__form"
+		     enctype   =  "multipart/form-data"
+		     action    =  "/api/mailing/work"
+		     method    =  "post"
+		>
+			<p class="title">Trabaja con Nosotros</p>
+			<input type="text" name="name" placeholder="Nombre" required>
+			<input type="email" name="email" placeholder="Email" required>
+			<select name="position">
+				<option selected disabled>Puesto</option>
+				<option value="Operador Grúa">Operador Grúa</option>
+				<option value="Operador Camion Grúa / Manlift">Operador Camion Grúa / Manlift</option>
+				<option value="Rigger">Rigger</option>
+			</select>
+			<label>Adjuntar CV (solo pdf)</label>
+		<input type="file" name="cv"/>
+		<input type="submit" value="Enviar" name="submit">
+		</form>
+
+	</section>
+
+{% endblock %}
+
+	<!-- <script>
+
+
+		$('form').submit(function (event) {
+			event.preventDefault()
+		})
+
+		$('form').submit(function (event) {
+
+			event.preventDefault()
+
+			var work = {
+				name: $('input[name="name"]').val(),
+				email: $('input[name="email"]').val(),
+				position: $('select').val()
+			}
+
+			// console.log(work)
+
+			var url = '/api/mailing/work/'
+
+			$('button').addClass('load')
+			$('.succes-msg').css('display', 'none')
+			$('.error-msg').css('display', 'none')
+
+			$.get(url, work, function (res) {
+				console.log('res: ', res)
+				if(res.status == 400) {
+					console.log('error')
+					$('.error-msg').css('display', 'block')
+				}
+				if(res.status == 200) {
+					console.log('succes')
+					$('button').removeClass('load')
+					$('.succes-msg').css('display', 'block')
+				}
+			})
+		})
+
+	</script> -->
+
+		<!-- <form class="contact__form">
+			<p class="title">Trabaja con Nosotros</p>
+			<input type="text" name="name" placeholder="Nombre" required>
+			<input type="email" name="email" placeholder="Email" required>
+			<select name="position">
+				<option selected disabled>Puesto</option>
+				<option value="volvo">Volvo</option>
+				<option value="saab">Saab</option>
+				<option value="mercedes">Mercedes</option>
+				<option value="audi">Audi</option>
+			</select>
+			<label>Adjuntar cv</label>
+			<input type="file" name="cv">
+			<p class="succes-msg">Te contestaremos via email muy pronto.</p>
+			<p class="error-msg">No se pudo enviar, intentalo de nuevo o mas tarde.</p>
+			<button><p>Enviar</p><i class="fa fa-spinner"></i></button>
+		</form> -->

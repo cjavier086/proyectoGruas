@@ -1,0 +1,97 @@
+/*------------------------------------*
+	$ HEADER
+*------------------------------------*/
+.header
+	z-index 1
+	width 100%
+	position absolute
+	top 0
+	letter-spacing 1px
+	background rgba(black, .3)
+	.nav
+		margin auto
+		display flex
+		align-items center
+		max-width max-width
+		// justify-content space-between
+		.logo
+			display block
+			max-width 60px
+			margin .5rem 1rem
+		.main-menu
+			// margin auto
+			display none
+			font-weight 600
+			font-size 0.8rem
+			text-transform uppercase
+			// font-family 'Roboto'
+			// font-weight 500
+			.main-menu-item
+				color white
+				padding .5rem
+				margin 0 .5rem
+				display inline-block
+				border-bottom solid 1px transparent
+				&.selected
+				// &:hover
+					border-bottom solid 1px #fdc400
+		.secondary-menu
+			// margin auto
+			display none
+			font-weight 600
+			font-size 0.65rem
+			text-transform uppercase
+			// font-family 'Roboto'
+			// font-weight 400
+			.secondary-menu-item
+				color white
+				padding .5rem
+				margin 0 .5rem
+				// padding .25rem
+				// margin 0 .25rem
+				display inline-block
+				border-bottom solid 1px transparent
+				&.selected
+				// &:hover
+					border-bottom solid 1px #fdc400
+		.button-menu
+			color white
+			margin 1rem
+			cursor pointer
+			font-size 1.5rem
+	.mobile-menu
+		width 100%
+		display none
+		font-weight 600
+		text-align center
+		position absolute
+		font-size 0.85rem
+		text-transform uppercase
+		// background rgba(black, .3)
+		background rgba(black, .75)
+		.mobile-menu-item
+			color white
+			margin .5rem
+			display block
+			padding .5rem
+			border-bottom solid 1px transparent
+			// &:hover
+			// 	border-bottom solid 1px #fdc400
+
+@media (min-width: tablet)
+	.header
+		.nav
+			.main-menu
+			.secondary-menu
+				display block
+			.button-menu
+				display none
+		.mobile-menu
+			display none
+
+.menus
+	flex 1
+	display flex
+	align-items center
+	justify-content space-between
+	padding-left 2rem

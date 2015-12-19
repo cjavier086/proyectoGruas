@@ -1,0 +1,48 @@
+{% extends './partials/base.html' %}
+
+{% set path = 'index' %}
+
+{% block title %} Grúas e Izajes {% endblock %}
+
+{% block styles %}
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+
+{% endblock %}
+
+
+{% block elements %}
+
+	<section class="main-slider">
+		<div class="slide" style="background-image:url(img/slide5.jpg);"></div>
+	</section>
+
+	<section class="main-cover">
+		<div class="main-text">
+			<h1>GRUAS e IZAJES</h1>
+			<h2>Tecnologia de Punta en Gruas Pesadas a su Disposicion</h2>
+		</div>
+		<div class="logos-background">
+			<div class="logos-container">
+				<div class="socials">
+					<a href="https://www.facebook.com/GruasEIzajesSac/"><i class="fa fa-facebook"></i></a>
+					<a href="https://www.linkedin.com/company/gruas-e-izajes"><i class="fa fa-linkedin"></i></a>
+				</div>
+				<div class="logos">
+					<p>Con el respaldo de &nbsp;&nbsp;&nbsp;</p>
+					<a class="logo" href="http://www.iccgsa.com/" style="margin-bottom: 1rem;">
+						<img src="img/iccgsa.png"><!-- Iccgsa -->
+					</a>
+					<a class="logo" href="http://www.conpax.cl/">
+						<img src="img/conpax.png"><!-- Conpax -->
+					</a>
+					<a class="logo" href="http://www.multiservice.cl/sitio/">
+						<img src="img/multiservice1.png"><!-- Multiservice -->
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}

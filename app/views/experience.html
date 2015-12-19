@@ -1,0 +1,46 @@
+{% extends './partials/base.html' %}
+
+{% block title %} Grúas e Izajes | Experiencia {% endblock %}
+
+{% block styles %}
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/experience.css">
+
+{% endblock %}
+
+{% block elements %}
+
+	<img class="cover" src="img/cover2.jpg"></img>
+
+	<section class="projects">
+		<p class="projects-title">GRUAS E IZAJES EN ACCIÓN</p>
+		<div class="projects-elements">
+			{% for experience in experiences %}
+				<article class="project">
+					<a class="project-inner" href="/experience/{{ experience.titleUrl }}">
+						{% if experience.media.images[0] %}
+							<img class="project-img" src="http://res.cloudinary.com/gruas-e-izajes/image/upload/v1444744696/{{ experience.media.images[0] }}.jpg">
+						{% else %}
+							<img class="project-img" src="img/project1.jpg">
+						{% endif %}
+						<div class="project-title">{{ experience.title }}</div>
+					</a>
+				</article>
+			{% endfor %}
+		</div>
+	</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+	<script type="text/javascript">
+
+		var experiences = {{ experiences|json|safe }}
+		console.log('experiences: ', experiences)
+
+	</script>
+
+{% endblock %}

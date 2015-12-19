@@ -1,0 +1,29 @@
+[
+	{
+		"title": "Test title 1",
+		"text": "Test text 1",
+		"media": [{
+			"images": [],
+			"videos": []
+		}],
+		"type": 1
+	},
+	{
+		"title": "Test title 2",
+		"text": "Test text 2",
+		"media": [{
+			"images": [],
+			"videos": []
+		}],
+		"type": 2
+	},
+	{
+		"title": "Test title 3",
+		"text": "Test text 3",
+		"media": [{
+			"images": [],
+			"videos": []
+		}],
+		"type": 3
+	}
+]

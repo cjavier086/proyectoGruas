@@ -1,0 +1,116 @@
+/*------------------------------------*
+	$ CONTACT
+*------------------------------------*/
+@import 'partials/base.styl'
+@import 'partials/header.styl'
+@import 'partials/footer.styl'
+
+
+.cover
+	// height 500px
+	height 350px
+	background-image url('../img/covers/contact-cover.jpg')
+	background-size cover
+	background-position center center
+	position relative
+	.cover
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+		// background rgba(#FFC107, .15)
+		background rgba(black, .1)
+
+
+.contact
+	max-width max-width
+	margin 4rem auto
+	// margin auto
+	&__information
+		// background rgba(green, .5)
+		margin 2rem .5rem
+	&__form
+		// background rgba(yellow, .5)
+		margin 2rem .5rem
+		display flex
+		flex-direction column
+	.title
+		padding .5rem
+		font-size 1.5rem
+	.info
+		padding .25rem .5rem
+		font-size .85rem
+		color #666
+		font-family 'Roboto'
+		a
+			color #fdc400
+	input
+	textarea
+	select
+	button
+		margin .5rem
+		padding .5rem
+		outline: 0;
+		border solid 1px #bbb
+	textarea
+		resize none
+		height 100px
+		font-size .95rem
+	input[type="submit"]
+		background #fdc400
+		border none
+		color white
+		font-weight 600
+		text-transform uppercase
+		cursor pointer
+	select
+		background: white;
+	input[type="file"]
+		padding 0
+	label
+		padding .25rem .5rem
+		font-size .85rem
+		font-family: 'Roboto';
+		color #666
+	button
+		background #fdc400
+		border none
+		color white
+		font-weight 600
+		text-transform uppercase
+		cursor pointer
+		i
+			display none
+			animation 1.5s load infinite
+		&.load
+			p
+				display none
+			i
+				display block
+	.succes-msg
+	.error-msg
+		font-size .85rem
+		padding .5rem
+		display none
+	.succes-msg
+		color green
+	.error-msg
+		color red
+
+
+@media (min-width: tablet)
+	.contact
+		display flex
+		&__information
+		&__form
+			flex 1
+
+
+@keyframes load
+	0%
+		transform rotate(0)
+	50%
+		transform rotate(-180deg)
+	100%
+		transform rotate(-360deg)

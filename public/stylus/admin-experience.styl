@@ -1,0 +1,63 @@
+@import 'nib'
+
+.buttons
+	display flex
+	justify-content: space-between;
+	padding 20px 0
+
+.images
+	display flex
+	align-items: flex-start;
+	flex-wrap: wrap;
+	justify-content: center
+	.image
+		max-width 250px
+		margin .5em
+		position relative
+		.cover
+			position absolute
+			background rgba(black, .25)
+			top 0
+			left 0
+			height 100%
+			width 100%
+			display none
+			i
+				color white
+			.upload
+				position relative
+				margin auto
+				font-size 3em
+				overflow: hidden;
+				input
+					position absolute
+					top 0
+					left 0
+					height 100%
+					width 100%
+					opacity 0
+			.delete
+				position absolute
+				right: 0;
+				bottom: 0;
+				padding .25em
+				font-size 1.5em
+				cursor pointer
+		.preview
+			img
+				width 100%
+		.bar
+			height 3px
+			background green
+			width 0%
+		.defout
+			background #E0E0E0
+			width 250px
+			height 200px
+			display none
+		&[data-id = "null"]
+			.defout
+				display flex
+		&:hover
+			.cover
+				display: flex;

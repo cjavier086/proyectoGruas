@@ -1,0 +1,125 @@
+/*------------------------------------*
+	$ PHOTO MANUALS
+*------------------------------------*/
+@import 'partials/base.styl'
+@import 'partials/header.styl'
+@import 'partials/footer.styl'
+
+/*------------------------------------*
+	$ PHOTO-MANUALS
+*------------------------------------*/
+
+.cover
+	height 400px
+	background-image url('../img/covers/equipment-cover.jpg')
+	background-size cover
+	background-position center center
+	position relative
+	.cover
+		position absolute
+		top 0
+		bottom 0
+		left 0
+		right 0
+		// background rgba(#FFC107, .1)
+		background rgba(black, .1)
+
+.sub-menu
+	border-bottom solid 1px #ddd
+	position fixed
+	top 0
+	background white
+	display none
+	.sub-menu-logo
+		max-width 40px !important
+	.sub-menu-item
+		color #333 !important
+		cursor pointer
+
+.title
+	font-weight 500
+	text-align center
+	font-size 1.75rem
+	max-width 1000px
+	margin auto
+	// padding 2rem 1rem
+	padding-top 3rem
+	// font-family: 'Source Sans Pro';
+	font-family: 'Roboto';
+	letter-spacing: 1px;
+.photo-manuals
+	// padding-top 5rem
+	max-width max-width
+	margin auto
+	.photo-manual
+		padding 1.5rem 0
+		.image-title
+			// color #444
+			font-size 1.5rem
+			margin .5rem 1rem
+			// font-family 'Russo One'
+			// border-bottom 1px dotted #aaa
+			border-bottom 1px dotted
+			font-family: 'Raleway';
+			letter-spacing: 2px;
+		.images
+			display flex
+			align-items center
+			.main-image
+				// padding 0 1rem
+				margin 0 1rem
+				flex 4
+				overflow hidden
+				// img
+					// transition all 0.7s
+					// &:hover
+					// 	transform scale(1.125)
+			.slider-image
+				flex 1
+				padding-right 1rem
+				img
+					cursor pointer
+					margin: .5rem 0;
+				a
+					display block
+					text-align center
+					margin .5rem
+					font-size 1.75rem
+					color black
+					cursor pointer
+		.image-description
+			margin 1rem
+			// font-family 'Armata'
+			font-size .9rem
+			// color #555
+			color #666
+			font-family: 'Roboto';
+			// letter-spacing: 2px;
+			a
+				color #fdc400
+				font-size 0.95rem
+				font-weight bold
+
+@media (min-width: 700px)
+	.photo-manuals
+		display flex
+		flex-wrap wrap
+		// background blue
+		.photo-manual
+			// margin auto
+			flex 1 50%
+			padding 3rem 0
+			max-width 50%
+			&.cover
+				flex 1 100%
+
+// font-family 'Archivo Black'
+// font-family 'Paytone One'
+// font-family 'Russo One'
+// font-family 'Fjalla One'
+// font-family 'Francois One'
+// font-family 'Orbitron'
+// font-family 'Jura'
+// font-family 'Passion One'
+// font-family 'Changa One'
+// font-family 'Archivo Black'
