@@ -1,0 +1,35 @@
+/*------------------------------------*
+	$ BASE
+*------------------------------------*/
+@import 'nib'
+@import 'reset.styl'
+
+// max-width = 950px
+max-width = 1000px
+mobil = 400px
+// tablet = 700px
+tablet = 760px
+desktop = 900px
+
+html
+	height 100%
+	font-size 90%
+
+@media (min-width: tablet)
+	html
+		font-size 100%
+		
+body
+	height 100%
+	font-family 'Raleway', sans-serif
+	line-height normal
+	
+@media (min-width: desktop)
+	*[data-row]
+		display flex
+		align-items center
+	*[data-column]
+		flex 1
+
+@import 'partials/header.styl'
+@import 'partials/footer.styl'

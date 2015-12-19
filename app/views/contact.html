@@ -1,0 +1,85 @@
+{% extends './partials/base.html' %}
+
+{% block title %} Grúas e Izajes | Contacto {% endblock %}
+
+{% block styles %}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/contact.css">
+
+{% endblock %}
+
+{% block elements %}
+
+<!-- 	<div class="cover">
+		<div class="cover"></div>
+	</div> -->
+
+	<section class="contact">
+		<div class="contact__information">
+			<p class="title">Informacion de Contacto</p>
+			<!-- <div class="map">mapita!</div> -->
+			<p class="info">Dirección: Calle Monte Rosa 233 oficina 303 Chacarilla Surco, LIma - Perú</p>
+			<p class="info">Teléfono: 994-740-422</p>
+			<p class="info">Web: <a href="">www.gruaseizajes.pe</a></p>
+			<p class="info">Email: <a href="">servicios@gruaseizajes.pe</a></p>
+		</div>
+		<form class="contact__form">
+			<p class="title">Solicite Cotización</p>
+			<input type="text" name="business" placeholder="Empresa" required>
+			<input type="text" name="applicant" placeholder="Nombre" required>
+			<input type="email" name="email" placeholder="Email" required>
+			<input type="tel" name="phone" placeholder="Teléfono" required>
+			<textarea name="application" placeholder="Solicitud" required></textarea>
+			<p class="succes-msg">Te contestaremos via email muy pronto.</p>
+			<p class="error-msg">No se pudo enviar, intentalo de nuevo o mas tarde.</p>
+			<button><p>Enviar</p><i class="fa fa-spinner"></i></button>
+			<!-- <input type="submit" value="Enviar"> -->
+		</form>
+	</section>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+	<script>
+
+		$('form').submit(function (event) {
+
+			event.preventDefault()
+
+			var contact = {
+				business: $('input[name="business"]').val(),
+				applicant: $('input[name="applicant"]').val(),
+				email: $('input[name="email"]').val(),
+				phone: $('input[name="phone"]').val(),
+				text: $('textarea').val()
+			}
+
+			console.log(contact)
+
+			var url = '/api/mailing/contact/'
+
+			$('button').addClass('load')
+			$('.succes-msg').css('display', 'none')
+			$('.error-msg').css('display', 'none')
+
+			$.get(url, contact, function (res) {
+				console.log('res: ', res)
+				if(res.status == 400) {
+					console.log('error')
+					$('.error-msg').css('display', 'block')
+				}
+				if(res.status == 200) {
+					console.log('succes')
+					$('button').removeClass('load')
+					$('.succes-msg').css('display', 'block')
+				}
+			})
+		})
+
+	</script>
+
+{% endblock %}

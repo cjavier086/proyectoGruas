@@ -1,0 +1,74 @@
+{% extends './partials/base.html' %}
+
+{% block title %} Grúas e Izajes | Experiencia - Single {% endblock %}
+
+{% block styles %}
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/experience-single.css">
+
+{% endblock %}
+
+{% block elements %}
+
+	<img class="cover" src="http://res.cloudinary.com/gruas-e-izajes/image/upload/v1444744696/{{experience.media.images[0]}}.jpg" height="700" width="3000"></img>
+
+	<section class="experiences">
+		<article class="experience">
+			<p class="experience-title">{{ experience.title }}</p>
+			<div class="experience-text"></div>
+			<div class="experience-slider">
+				<div class="slider-image">
+					<i class="fa fa-chevron-left"></i>
+					<i class="fa fa-chevron-right"></i>
+					{% for image in experience.media.images %}
+						<img src="http://res.cloudinary.com/gruas-e-izajes/image/upload/v1444744696/{{ image }}.jpg">
+					{% endfor %}
+				</div>
+			</div>
+		</article>
+	</section>
+
+	<section class="more-projects">
+		<p class="more-projects-title">OTROS PROYECTOS</p>
+		<div class="projects">
+			{% for moreExperience in more %}
+			<article class="project">
+				<a class="project-inner" href="/experience/{{ moreExperience.titleUrl }}">
+					<img class="project-img" src="http://res.cloudinary.com/gruas-e-izajes/image/upload/v1444744696/{{ moreExperience.media.images[0] }}.jpg">
+					<div class="project-title">{{ moreExperience.title }}</div>
+				</a>
+			</article>
+			{% endfor %}
+			<!-- <article class="project">
+				<div class="project-inner">
+					<img class="project-img" src="/img/project2.jpg">
+					<div class="project-title">TWO YEARS OF PREPARATION FOR A FIFTEEN-MINUTE CROSSING.</div>
+				</div>
+			</article>
+			<article class="project">
+				<div class="project-inner">
+					<img class="project-img" src="/img/project3.jpg">
+					<div class="project-title">TWO YEARS OF PREPARATION FOR A FIFTEEN-MINUTE CROSSING.</div>
+				</div>
+			</article> -->
+		</div>
+	</section>
+
+{% endblock %}
+
+{% block scripts %}
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="/js/experience-slider.js"></script>
+
+	<script type="text/javascript">
+		var experience = {{ experience|json|safe }}
+		console.log('experience: ', experience)
+		var more = {{ more|json|safe }}
+		console.log('more: ', more)
+
+		html = $.parseHTML( experience.text )
+		$('.experience-text').append( html );
+	</script>
+
+{% endblock %}

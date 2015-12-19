@@ -1,0 +1,184 @@
+/*------------------------------------*
+	$ EXPERIENCE SINGLE
+*------------------------------------*/
+@import 'partials/base.styl'
+@import 'partials/header.styl'
+@import 'partials/footer.styl'
+
+
+/*------------------------------------*
+	$ PROJECTS
+*------------------------------------*/
+// .projects
+// 	padding 4rem 0
+// 	background #fafafa
+// 	overflow hidden
+// 	.projects-title
+// 		text-align center
+// 		// font-size 1.5rem
+// 		font-size 1.75rem
+// 		max-width max-width
+// 		margin auto
+// 		padding 2rem 1rem
+// 	.projects-elements
+// 		max-width max-width
+// 		margin auto
+// 		.project
+// 			&-inner
+// 				margin 1rem
+// 				display block
+// 				&:hover
+// 					.project-title
+// 						background #fdc400
+// 						color white
+// 			&-title
+// 				min-height 10rem
+// 				font-family 'Source Sans Pro'
+// 				background #fff
+// 				padding 1rem
+// 				font-weight 700
+// 				color #333
+// 				text-transform uppercase
+// 				transition background .5s
+
+// @media (min-width: mobil)
+// 	.projects
+// 		.projects-elements
+// 			display flex
+// 			flex-wrap wrap
+// 			justify-content center
+// 			.project
+// 				max-width 50%
+
+// @media (min-width: tablet)
+// 	.projects
+// 		.projects-elements
+// 			.project
+// 				max-width 33.333%
+
+
+/*------------------------------------*
+	$ EXPERIENCE
+*------------------------------------*/
+.experiences
+	.experience
+		// padding-bottom 3rem
+		padding: 2rem 0;
+		&-title
+			text-align center
+			// margin 0.5rem 1rem
+			margin: 1rem;
+			// color #444
+			// font-family 'Russo One'
+			// font-size 1.5rem
+			font-family 'Raleway'
+			font-weight: 500;
+			letter-spacing 2px
+			font-size 2.25rem
+			// font-weight: 300;
+		&-text
+			max-width max-width
+			margin auto
+			padding 0 1rem
+			// font-family: 'Armata';
+			// font-size: 0.9rem;
+			// color: #555;
+
+			color #666666
+			font-family 'Roboto'
+			font-size: .95rem;
+
+		&-slider
+			max-width max-width
+			margin auto
+			padding 1rem
+			.slider-image
+				font-size 0
+				white-space nowrap
+				overflow hidden
+				position relative
+				img
+					display inlnie-block
+					transition transform .7s
+				.fa-chevron-left
+				.fa-chevron-right
+					position absolute
+					top 50%
+					font-size 2rem
+					color white
+					transform translate(0, -50%)
+					cursor pointer
+					padding .5rem
+					z-index 1
+					background #fdc400
+				.fa-chevron-left
+					padding-right .9rem
+					left 0
+				.fa-chevron-right
+					padding-left .9rem
+					right 0
+
+@media (min-width: 700px)
+	.experiences
+		.experience
+			&-title
+				font-size 2rem
+				margin 1rem
+			&-text
+				column-count 2
+				padding .5rem 1rem
+
+
+/*------------------------------------*
+	$ MORE PROJECTS
+*------------------------------------*/
+.more-projects
+	background #fafafa
+	overflow hidden
+	padding 2rem 0
+	&-title
+		text-align center
+		color #444
+		font-size 1.5rem
+		margin 0.5rem 1rem
+		// font-family 'Russo One'
+		font-family 'Raleway'
+		font-weight 600
+	.projects
+		// display flex
+		max-width max-width
+		margin auto
+		.project
+			padding 1rem
+			&-inner
+				background white
+				cursor pointer
+				&:hover
+					.project-title
+						background #fdc400
+						color white
+			&-title
+				padding 1rem
+				color #444
+				// font-family 'Russo One'
+				font-family: 'Source Sans Pro';
+				font-weight: 600;
+				background white
+				min-height 10rem
+				transition background .5s
+
+@media (min-width: 400px)
+	.more-projects
+		.projects
+			display flex
+			flex-wrap wrap
+			justify-content: center;
+			.project
+				width: 50%
+
+
+@media (min-width: 700px)
+	.more-projects
+		.projects
+			.project
+				flex 1

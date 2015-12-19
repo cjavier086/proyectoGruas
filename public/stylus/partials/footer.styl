@@ -1,0 +1,24 @@
+/*------------------------------------*
+	$ FOOTER
+*------------------------------------*/
+.footer
+	font-size .85rem
+	font-family 'Roboto'
+	display: flex;
+	justify-content: space-between;
+	margin auto
+	max-width max-width
+	&-inner
+		padding 1rem .5rem
+	&-item
+		color #666666
+		padding 0 .5rem
+		display inline-block
+		&:not(:first-child)
+			border-left 1px solid rgba(204,204,204,0.5)
+		img
+			max-width 20px
+
+.footer[data-color=light]
+	.footer-item
+		color white

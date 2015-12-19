@@ -1,0 +1,462 @@
+{% extends './partials/base.html' %}
+
+{% block title %} Grúas e Izajes | Equipos {% endblock %}
+
+{% block styles %}
+
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/equipment.css">
+
+{% endblock %}
+
+{% block elements %}
+
+	<!-- Modals1 -->
+	<div class="modal fade" id="tableModal1" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+						  <tr>
+						    <th>#</th>
+						    <th>First Name</th>
+						    <th>Last Name</th>
+						    <th>Username</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+						    <th scope="row">1</th>
+						    <td>Mark</td>
+						    <td>Otto</td>
+						    <td>@mdo</td>
+						  </tr>
+						  <tr>
+						    <th scope="row">2</th>
+						    <td>Jacob</td>
+						    <td>Thornton</td>
+						    <td>@fat</td>
+						  </tr>
+						  <tr>
+						    <th scope="row">3</th>
+						    <td>Larry</td>
+						    <td>the Bird</td>
+						    <td>@twitter</td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="galeryModal1" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="img/portfolio-item-4.jpg" alt="...">
+				    </div>
+				    <div class="item">
+				      <img src="img/portfolio-item-4.jpg" alt="...">
+				    </div>
+				  </div>
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modals2 -->
+	<div class="modal fade" id="tableModal2" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+						  <tr>
+						    <th>#</th>
+						    <th>First Name</th>
+						    <th>Last Name</th>
+						    <th>Username</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+						    <th scope="row">1</th>
+						    <td>Mark</td>
+						    <td>Otto</td>
+						    <td>@mdo</td>
+						  </tr>
+						  <tr>
+						    <th scope="row">2</th>
+						    <td>Jacob</td>
+						    <td>Thornton</td>
+						    <td>@fat</td>
+						  </tr>
+						  <tr>
+						    <th scope="row">3</th>
+						    <td>Larry</td>
+						    <td>the Bird</td>
+						    <td>@twitter</td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="galeryModal2" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="img/portfolio-item-4.jpg" alt="...">
+				    </div>
+				    <div class="item">
+				      <img src="img/portfolio-item-4.jpg" alt="...">
+				    </div>
+				  </div>
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modals3 -->
+	<div class="modal fade" id="tableModal3" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+						  <tr>
+						    <th>#</th>
+						    <th>First Name</th>
+						    <th>Last Name</th>
+						    <th>Username</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+						    <th scope="row">1</th>
+						    <td>Mark</td>
+						    <td>Otto</td>
+						    <td>@mdo</td>
+						  </tr>
+						  <tr>
+						    <th scope="row">2</th>
+						    <td>Jacob</td>
+						    <td>Thornton</td>
+						    <td>@fat</td>
+						  </tr>
+						  <tr>
+						    <th scope="row">3</th>
+						    <td>Larry</td>
+						    <td>the Bird</td>
+						    <td>@twitter</td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="galeryModal3" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="img/portfolio-item-4.jpg" alt="...">
+				    </div>
+				    <div class="item">
+				      <img src="img/portfolio-item-4.jpg" alt="...">
+				    </div>
+				  </div>
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modals4 -->
+	<div class="modal fade" id="tableModal4" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="table-responsive">
+					<table class="table table-striped">
+						<thead>
+						  <tr>
+						    <th>#</th>
+						    <th>First Name</th>
+						    <th>Last Name</th>
+						    <th>Username</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+						    <th scope="row">1</th>
+						    <td>Mark</td>
+						    <td>Otto</td>
+						    <td>@mdo</td>
+						  </tr>
+						  <tr>
+						    <th scope="row">2</th>
+						    <td>Jacob</td>
+						    <td>Thornton</td>
+						    <td>@fat</td>
+						  </tr>
+						  <tr>
+						    <th scope="row">3</th>
+						    <td>Larry</td>
+						    <td>the Bird</td>
+						    <td>@twitter</td>
+						  </tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="galeryModal4" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+				  <!-- Wrapper for slides -->
+				  <div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="img/portfolio-item-4.jpg" alt="...">
+				    </div>
+				    <div class="item">
+				      <img src="img/portfolio-item-4.jpg" alt="...">
+				    </div>
+				  </div>
+				  <!-- Controls -->
+				  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- <img class="cover" src="img/covers/equipment-cover2.jpg"></img> -->
+
+	<div class="cover">
+		<div class="cover"></div>
+	</div>
+
+
+	<header class="header sub-menu">
+		<nav class="nav">
+			<a class="logo sub-menu-logo" href="/"><img src="/img/logo-small.jpg"></a>
+			<div class="menus">
+				<div class="main-menu">
+				</div>
+				<div class="secondary-menu">
+					<a class="secondary-menu-item sub-menu-item a-gruas">Gruas</a>
+					<a class="secondary-menu-item sub-menu-item a-camiones-gruas">Camiones Grua</a>
+					<a class="secondary-menu-item sub-menu-item a-manlift">Manlift</a>
+				</div>
+			</div>
+			<span class="button-menu"><i class="fa fa-bars"></i></span>
+		</nav>
+	</header>
+
+	<table style="width:100%">
+  <tbody><tr>
+    
+    <td align="center" valign="center" width="40" height="40"><strong>Grúas</strong></td>		
+    <td align="center" valign="center" width="40" height="40"><strong>Camiones Grúa </strong></td>
+    <td align="center" valign="center" width="40" height="40"><strong>Manlift</strong></td>
+  </tr>
+    
+    
+  
+  <tr>
+    
+    <td align="center" valign="center" width="40" height="40">Liebherr LTM 1090 - 90 TON</td>		
+    <td align="center" valign="center" width="40" height="40">Volvo 8x4 / Fassi F560R / 20 Ton</td>
+    <td align="center" valign="center" width="40" height="40">Genie S125 - 125 feet</td>
+  </tr><tr>
+    
+    <td align="center" valign="center" width="40" height="40"><div class="slider-image">
+					<a data-toggle="modal" data-target="#galeryModal1">
+						<i class="fa fa-picture-o" data-toggle="tooltip" data-placement="right" title="Galeria" `=""></i>
+					</a>
+					<a data-toggle="modal" data-target="#tableModal1">
+						<i class="fa fa-table" data-toggle="tooltip" data-placement="right" title="Detalles"></i>
+					</a>
+					<a href="manuals/FICHA-TECNICA-GRUA-LTM-1090.pdf">
+						<i class="fa fa-file-text-o" data-toggle="tooltip" data-placement="right" title="Manual"></i>
+					</a>
+				</div></td>		
+    <td align="center" valign="center" width="40" height="40"><div class="slider-image">
+					<a data-toggle="modal" data-target="#galeryModal1"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="right" title="Galeria" `=""></i></a>
+					<a data-toggle="modal" data-target="#tableModal1"><i class="fa fa-table" data-toggle="tooltip" data-placement="right" title="Detalles"></i></a>
+					<a href="manuals/FICHA-TECNICA-GRUA-LTM-1090.pdf"><i class="fa fa-file-text-o" data-toggle="tooltip" data-placement="right" title="Manual"></i></a>
+				</div></td>
+    <td align="center" valign="center" width="40" height="40"><div class="slider-image">
+					<a data-toggle="modal" data-target="#galeryModal1"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="right" title="Galeria" `=""></i></a>
+					<a data-toggle="modal" data-target="#tableModal1"><i class="fa fa-table" data-toggle="tooltip" data-placement="right" title="Detalles"></i></a>
+					<a href="manuals/FICHA-TECNICA-GRUA-LTM-1090.pdf"><i class="fa fa-file-text-o" data-toggle="tooltip" data-placement="right" title="Manual"></i></a>
+				</div></td>
+  </tr>
+  <tr>
+    
+    <td align="center" valign="center" width="40" height="40">Liebherr LTM 1130 - 130 TON</td>		
+    <td align="center" valign="center" width="40" height="40"></td>
+    <td align="center" valign="center" width="40" height="40"></td>
+  </tr><tr>
+    <td td="" align="center" valign="center" width="40" height="40"><div class="slider-image">
+					<a data-toggle="modal" data-target="#galeryModal2"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="right" title="Galeria" `=""></i></a>
+					<a data-toggle="modal" data-target="#tableModal2"><i class="fa fa-table" data-toggle="tooltip" data-placement="right" title="Detalles"></i></a>
+					<a href="manuals/FICHA-TECNICA-GRUA-LTM-1130.pdf"><i class="fa fa-file-text-o" data-toggle="tooltip" data-placement="right" title="Manual"></i></a>
+				</div>
+    </td>
+  </tr>
+  
+  <tr>
+    
+    <td align="center" valign="center" width="40" height="40">Terex Explorer 5500 - 130 TON</td>		
+    <td align="center" valign="center" width="40" height="40"></td>
+    <td align="center" valign="center" width="40" height="40"></td>
+  </tr><tr>
+    <td align="center" valign="center" width="40" height="40"><div class="slider-image">
+					<!-- <img src="img/portfolio-item-4.jpg"> -->
+					<a data-toggle="modal" data-target="#galeryModal3"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="right" title="Galeria" `=""></i></a>
+					<a data-toggle="modal" data-target="#tableModal3"><i class="fa fa-table" data-toggle="tooltip" data-placement="right" title="Detalles"></i></a>
+					<a href="manuals/FICHA-TECNICA-Explorer-5500.pdf"><i class="fa fa-file-text-o" data-toggle="tooltip" data-placement="right" title="Manual"></i></a>
+				</div>
+    </td>
+  </tr>
+  
+  <tr>
+    
+    <td align="center" valign="center" width="40" height="40">Terex Explorer 5600 - 160 TON</td>		
+    <td align="center" valign="center" width="40" height="40"></td>
+    <td align="center" valign="center" width="40" height="40"></td>
+  </tr>
+  <tr>
+    <td align="center" valign="center" width="40" height="40"><div class="slider-image">
+					<!-- <img src="img/portfolio-item-4.jpg"> -->
+					<a data-toggle="modal" data-target="#galeryModal4"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="right" title="Galeria" `=""></i></a>
+					<a data-toggle="modal" data-target="#tableModal4"><i class="fa fa-table" data-toggle="tooltip" data-placement="right" title="Detalles"></i></a>
+					<a href="manuals/FICHA-TECNICA-Explorer-5600.pdf"><i class="fa fa-file-text-o" data-toggle="tooltip" data-placement="right" title="Manual"></i></a>
+				</div></td>
+  </tr>
+  <tr>
+    
+    <td align="center" valign="center" width="40" height="40">Terex explorer 5800 - 220 TON</td>		
+    <td align="center" valign="center" width="40" height="40"></td>
+    <td align="center" valign="center" width="40" height="40"></td>
+  </tr>
+  
+  <tr>
+    <td align="center" valign="center" width="40" height="40"><div class="slider-image">
+					<!-- <img src="img/portfolio-item-4.jpg"> -->
+					<a data-toggle="modal" data-target="#galeryModal4"><i class="fa fa-picture-o" data-toggle="tooltip" data-placement="right" title="Galeria" `=""></i></a>
+					<a data-toggle="modal" data-target="#tableModal4"><i class="fa fa-table" data-toggle="tooltip" data-placement="right" title="Detalles"></i></a>
+					<a href="manuals/FICHA-TECNICA-Explorer-5600.pdf"><i class="fa fa-file-text-o" data-toggle="tooltip" data-placement="right" title="Manual"></i></a>
+				</div>
+    </td>
+  </tr>
+    
+    
+  
+</tbody></table>
+
+{% endblock %}
+
+{% block scripts %}
+
+	<script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+	<script>
+
+		var subMenu = document.querySelector('.sub-menu')
+
+		window.addEventListener('scroll', function (e) {
+			var top = this.scrollY
+			if (top >= 370) subMenu.style.display = "block"
+			if (top < 370) subMenu.style.display = "none"
+		})
+
+		$('document').ready(function () {
+			$('.a-gruas').click(function () {
+				var position = jQuery('#gruas').offset().top;
+				var body = jQuery("html, body");
+				body.animate({scrollTop: position}, '500', 'swing');
+			})
+			$('.a-camiones-gruas').click(function () {
+				var position = jQuery('#camiones-gruas').offset().top;
+				var body = jQuery("html, body");
+				body.animate({scrollTop: position}, '500', 'swing');
+			})
+			$('.a-manlift').click(function () {
+				var position = jQuery('#manlift').offset().top;
+				var body = jQuery("html, body");
+				body.animate({scrollTop: position}, '500', 'swing');
+			})
+		})
+	</script>
+
+{% endblock %}

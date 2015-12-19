@@ -1,0 +1,112 @@
+.buttons {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  -o-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.images {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-align: start;
+  -moz-box-align: start;
+  -o-box-align: start;
+  -ms-flex-align: start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -o-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+.images .image {
+  max-width: 250px;
+  margin: 0.5em;
+  position: relative;
+}
+.images .image .cover {
+  position: absolute;
+  background: rgba(0,0,0,0.25);
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+.images .image .cover i {
+  color: #fff;
+}
+.images .image .cover .upload {
+  position: relative;
+  margin: auto;
+  font-size: 3em;
+  overflow: hidden;
+}
+.images .image .cover .upload input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+.images .image .cover .delete {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0.25em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+.images .image .preview img {
+  width: 100%;
+}
+.images .image .bar {
+  height: 3px;
+  background: #008000;
+  width: 0%;
+}
+.images .image .defout {
+  background: #e0e0e0;
+  width: 250px;
+  height: 200px;
+  display: none;
+}
+.images .image[data-id = "null"] .defout {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+.images .image:hover .cover {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
