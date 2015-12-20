@@ -5,7 +5,7 @@ var express 		= require('express'),
 		swig 				= require('swig'),
 		bodyParser 	= require('body-parser');
 
-var app = express()
+var app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -13,11 +13,11 @@ app.use(bodyParser.json());
 /*------------------------------------*
 	$ CONFIG TEMPLATING
 *------------------------------------*/
-app.engine('html', swig.renderFile)
-app.set('view engine', 'html')
-app.set('views', __dirname + '/app/views')
+app.engine('html', swig.renderFile);
+app.set('view engine', 'html');
+app.set('views', __dirname + '/app/views');
 
-app.use(express.static('./public'))
+app.use(express.static('./public'));
 
 
 /*------------------------------------*
@@ -29,12 +29,14 @@ app.use(express.static('./public'))
 /*------------------------------------*
 	$ LOAD ROUTES
 *------------------------------------*/
-var routes = require('./app/routes/routes')
-routes(app)
+var routes = require('./app/routes/routes');
+routes(app);
 
 
 /*------------------------------------*
 	$ INIT APP
 *------------------------------------*/
-app.listen(process.env.PORT || 4000);
+app.listen((process.env.PORT || 5000), function(){
+	console.log('listening on *:5000');
+});
 	

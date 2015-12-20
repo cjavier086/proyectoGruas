@@ -1,29 +1,17 @@
 
 var multer  = require('multer');
 var express = require('express');
-var cloudinary = require('cloudinary');
+
 var mongoose = require('../models/mongoose');
-cloudinary.config({
-	cloud_name: "gruas-e-izajes",
-	api_key: "321327297818117",
-	api_secret: "5EeW1ht_RlVw6OD6Zk0lSjdCBVo"
 
-})
 var upload = multer({ dest: 'uploads/' }).single('cv');
-var apli = express();
-apli.use(multer({dest: "./public/img"}));
 
-var imgSchema = {
-	imageUrl: String
-};
-
-var imagen = mongoose.model("Imagen", imgSchema);
 
 var mailingController = function (app) {
 
 	app.get('/api/mailing/contact', function (req, res) {
 
-		var contact = req.query
+		var contact = req.query;
 
 		var nodemailer = require('nodemailer');
 		var mg = require('nodemailer-mailgun-transport');
@@ -33,7 +21,7 @@ var mailingController = function (app) {
 				api_key: 'key-437a2a27c963c3e46817e85fb380c134',
 				domain: 'appbf314a2637244d329adf272e1f893eda.mailgun.org'
 			}
-		}
+		};
 
 		var transport = nodemailer.createTransport(mg(auth));
 
@@ -47,34 +35,12 @@ var mailingController = function (app) {
 
 		}, function (err, responseStatus) {
 
-			if(!err) return res.send({status: 200})
+			if(!err) return res.send({status: 200});
 			else return res.send({status: 400})
 		})
 
-	})
+	});
 
-	app.post('/admin/experiences/', function (req, res){
-		console.log("entro al post de subir imagen");
-		var data = {
-			imageUrl: "experience-slide2.jpg"
-		}
-
-		var variable = new Imagen(data);
-		cloudinary.uploader.upload(req.files.img.path,function(result){
-			variable.imageUrl = result.url;
-
-			variable.save(function(err)){
-				console.log(variable)
-			}
-		})
-		console.log(req.files);	
-		
-		
-		//cloudinary.uploader.upload("experience-slide2.jpg", function (result){
-		//	console.log("El resultado es: " + result);
-		//})
-
-	})
 
 	app.post('/api/mailing/work', function (req, res) {
 
@@ -84,8 +50,8 @@ var mailingController = function (app) {
 	    	return res.redirect('/work')
 	    }
 
-			var work = req.body
-			var file = req.file
+			var work = req.body;
+			var file = req.file;
 
 			var nodemailer = require('nodemailer');
 			var mg = require('nodemailer-mailgun-transport');
@@ -96,7 +62,7 @@ var mailingController = function (app) {
 					api_key: 'key-437a2a27c963c3e46817e85fb380c134',
 					domain: 'appbf314a2637244d329adf272e1f893eda.mailgun.org'
 				}
-			}
+			};
 
 			var transport = nodemailer.createTransport(mg(auth));
 
@@ -118,16 +84,16 @@ var mailingController = function (app) {
 
 				// if(!err) return res.send({status: 200})
 				// else return res.send({status: 400})
-				if(!err) return res.redirect('/work')
-				else return res.redirect('/work')
+				if(!err) return res.redirect('/work');
+				else return res.redirect('/work');
 			})
 
 	  })
 
-	})
+	});
 
 	app.post('/api/mailing/')
 
-}
+};
 
-module.exports = mailingController
+module.exports = mailingController;
